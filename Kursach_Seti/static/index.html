@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Бригады</title>
+    <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            Контроль сдач
+        </div>
+    </header>
+    <main>
+        <div class="nav">
+            <label for="brigades">
+                Бригады
+            </label>
+            <label for="labs">
+                Сдачи работ
+            </label>
+            <label for="all">
+                Сводка
+            </label>
+        </div>
+
+
+        <input checked type="radio" id="brigades" name="tab-selector" class="tab-select">
+        <div class="content-box">
+
+            <form id="brigades-form" class="input-form">
+                <input name="num" type="text" placeholder="Номер бригады">
+                <input name="students" type="text" placeholder="Фамилии студентов, через ,">
+                <input type="submit" value="Добавить">
+            </form>
+
+            <div class="row heading">
+                <div class="delete-col">
+                </div>
+                <div class="col1">
+                    Номер бригады
+                </div>
+                <div class="col1">
+                    Студенты
+                </div>
+            </div>
+
+            <div class="list-container" id="brigades-container">
+
+            </div>
+
+        </div>
+
+        <input type="radio" id="labs" name="tab-selector" class="tab-select">
+        <div class="content-box">
+            <form id="pass-lab-form" class="input-form">
+                <input name="num" type="text" placeholder="Номер бригады">
+                <input name="lab_num" type="text" placeholder="Номер работы">
+                <input name="date" type="text" placeholder="Дата сдачи, формат: день.месяц.год">
+                <input type="submit" value="Добавить">
+            </form>
+
+            <div class="row heading">
+                <div class="delete-col">
+
+                </div>
+                <div class="col2">
+                    Номер бригады
+                </div>
+                <div class="col2">
+                    Номер работы
+                </div>
+                <div class="col2">
+                    Дата сдачи
+                </div>
+            </div>
+
+            <div class="list-container" id="submitions-container">
+
+            </div>
+        </div>
+
+        <input type="radio" id="all" name="tab-selector" class="tab-select">
+        <div class="content-box">
+            <form class="input-form">
+                <input id="search-input" name="num" type="text" placeholder="Что ищем?">
+            </form>
+
+            <div class="row heading">
+                <div class="col3">
+                    Номер бригады
+                </div>
+                <div class="col3">
+                    Номер работы
+                </div>
+                <div class="col3">
+                    Дата сдачи
+                </div>
+                <div class="col3">
+                    Студенты
+                </div>
+            </div>
+
+            <div class="list-container" id="all-container">
+
+            </div>
+        </div>
+
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
